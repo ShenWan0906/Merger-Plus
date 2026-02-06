@@ -2,7 +2,7 @@
 
 // 1. 使用 ES Module 导入依赖
 import QRCode from "qrcode";
-import UAParser from "ua-parser-js";
+import { UAParser } from "ua-parser-js";
 // 2. 直接引入配置文件，不再依赖 HTML 里的 EJS 注入，这样更安全、Vite 支持更好
 import DATA from "./config.json"; 
 
