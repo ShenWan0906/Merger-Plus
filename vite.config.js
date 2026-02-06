@@ -4,6 +4,7 @@ import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import config from './config.json';
 
 export default defineConfig({
+  base: '/pay/', // 关键：如果是子路径部署，必须加上这个
   plugins: [
     ViteEjsPlugin({ DATA: config }),
   ],

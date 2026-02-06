@@ -1,0 +1,42 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # 监听 main 分支，只要有代码提交，就自动触发
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 安装 Node 环境 (为了打包)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Vite 需要较新的 Node，Actions里用 20 很稳
+
+      # 3. 安装依赖并构建
+      - name: Install and Build
+        run: |
+          yarn install
+          yarn build
+        # 这一步会在 GitHub 的服务器上生成 dist 文件夹
+
+      # 4. 把 dist 文件夹传送到你的服务器
+      - name: Deploy to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: "dist/*"         # 只传构建好的 dist 文件夹
+          target: "/www/merger-plus" # 服务器上的目标目录
+          strip_components: 1      # 去掉 dist 这一层目录，直接把内容甩进去
+
+      # 5. (可选) 如果是 Nginx，通常不需要重启，文件覆盖即生效
+      # 如果需要清理旧文件，可以在 scp 之前加一步 ssh 远程删除
