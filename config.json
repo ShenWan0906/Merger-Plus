@@ -1,27 +1,27 @@
 {
   "profile": "images/demo-avatar.png", 
-  "name": "西瓜",
+  "name": "ShenWan",
   "description": "您的支持，是我前进最大的动力！",
   "qrlogo": "statics/icon.png", 
   "alipay": {
-    "title": "😘支付宝扫一扫 投喂西瓜",
-    "othertitle": "长按图片保存，在支付宝打开<br />😘感谢投喂西瓜",
+    "title": "😘支付宝扫一扫 投喂作者",
+    "othertitle": "长按图片保存，在支付宝打开<br />😘感谢投喂作者",
     "url": "https://qr.alipay.com/fkx19217ac9locqdxermm0f",
     "open_url": "alipays://platformapi/startapp?appId=10000007&qrcode=https://qr.alipay.com/fkx19217ac9locqdxermm0f",
     "savetext": ""
   },
   "wechatpay": {
-    "title": "😘微信扫一扫 投喂西瓜",
-    "othertitle": "长按图片保存，在微信打开<br />😘感谢投喂西瓜",
+    "title": "😘微信扫一扫 投喂作者",
+    "othertitle": "长按图片保存，在微信打开<br />😘感谢投喂作者",
     "url": "wxp://f2f0u-6_ynx-fKPg189AoL2yo6FIiddHAFApkoENdwTypndxXMmRo_BUPF5uhEGf5D5L",
     "savetext": "",
-    "wechattitle": "😘长按图片扫一扫 投喂西瓜",
+    "wechattitle": "😘长按图片扫一扫 投喂作者",
     "wechattext": "如使用其他方式付款，请点击右上角<br />并选择”在浏览器打开“",
     "toapptext": "保存完成，去微信扫一扫"
   },
   "tenpay": {
-    "title": "😘手机QQ扫一扫 投喂西瓜",
-    "othertitle": "长按图片保存，在手机QQ打开<br />😘感谢投喂西瓜",
+    "title": "😘手机QQ扫一扫 投喂作者",
+    "othertitle": "长按图片保存，在手机QQ打开<br />😘感谢投喂作者",
     "url": "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&a=1&u=1127763116&ac=CAEQrJnhmQQY2-qRzAYyDOS4quS6uuekvuS6pDgBQiBiNjJkY2VhNGUxMDUyYzA2NWM0OWU0ZDkwMDgzZjE4MEokMjQwOTo4OTI5OjY4MDo0OTU6NjUwOTpmNzE6N2Y0MTplN2Ri_xxx_sign&n=%E4%BA%8B%E5%84%BF&f=wallet",
     "savetext": "",
     "toapptext": "保存完成，去手机QQ扫一扫"
